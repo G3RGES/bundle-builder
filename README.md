@@ -1,18 +1,122 @@
-# React + Vite
+# Bundle Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that allows users to build a personalized home security bundle by selecting cameras, sensors, accessories, and a monitoring plan while reviewing their order in real time.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application provides a multi-step bundle builder with a live review panel, automatic price calculations, and persistent state using Local Storage.
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Features
 
-Note: This will impact Vite dev & build performances.
+- Multi-step accordion interface
+- Live review panel
+- Product variant selection
+- Quantity management
+- Monitoring plan selection
+- Automatic subtotal and savings calculation
+- Free shipping support
+- Responsive design (mobile, tablet, desktop)
+- Toast notifications
+- Local Storage persistence
+- Save bundle for later
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Context API
+- useReducer
+- Lucide React
+- React Hot Toast
+
+---
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── Accordion/
+│   ├── Product/
+│   ├── Review/
+│   └── Shared/
+│
+├── context/
+├── data/
+├── hooks/
+├── utils/
+├── constants/
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## State Management
+
+The application uses the Context API together with `useReducer` to manage the bundle state globally.
+
+State includes:
+
+- Selected products
+- Product variants
+- Quantities
+- Active accordion step
+
+The bundle is automatically persisted to Local Storage and restored when the application reloads.
+
+---
+
+## Responsive Design
+
+The interface is optimized for:
+
+- Mobile devices
+- Tablets
+- Desktop screens
+
+Layouts automatically adapt based on screen size while maintaining usability.
+
+---
+
+## Author
+
+**Gerges Nashaat**
+
+- GitHub: https://github.com/G3RGES
+- LinkedIn: https://linkedin.com/in/gergesnashaat
