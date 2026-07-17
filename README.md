@@ -1,26 +1,26 @@
 # Bundle Builder
 
-A responsive React application that allows users to build a personalized home security bundle by selecting cameras, sensors, accessories, and a monitoring plan while reviewing their order in real time.
+A responsive React application that allows users to build a personalized home security bundle by selecting cameras, sensors, accessories, and a monitoring plan with a live order review.
 
-## Preview
+## Live Demo
 
-The application provides a multi-step bundle builder with a live review panel, automatic price calculations, and persistent state using Local Storage.
+🔗 https://bundle-builder-tau-six.vercel.app
 
 ---
 
 ## Features
 
-- Multi-step accordion interface
+- Multi-step accordion workflow
 - Live review panel
 - Product variant selection
 - Quantity management
-- Monitoring plan selection
-- Automatic subtotal and savings calculation
+- Home monitoring plan selection
+- Real-time price calculations
+- Savings calculation
 - Free shipping support
-- Responsive design (mobile, tablet, desktop)
 - Toast notifications
 - Local Storage persistence
-- Save bundle for later
+- Responsive design for mobile, tablet, and desktop
 
 ---
 
@@ -44,19 +44,19 @@ The application provides a multi-step bundle builder with a live review panel, a
 npm install
 ```
 
-### Start the development server
+### Run locally
 
 ```bash
 npm run dev
 ```
 
-### Build for production
+### Build
 
 ```bash
 npm run build
 ```
 
-### Preview the production build
+### Preview production build
 
 ```bash
 npm run preview
@@ -67,20 +67,17 @@ npm run preview
 ## Project Structure
 
 ```
-src/
-│
-├── components/
-│   ├── Accordion/
-│   ├── Product/
-│   ├── Review/
-│   └── Shared/
-│
-├── context/
-├── data/
-├── hooks/
-├── utils/
-├── constants/
-│
+src
+├── components
+│   ├── Accordion
+│   ├── Product
+│   ├── Review
+│   └── Shared
+├── constants
+├── context
+├── data
+├── hooks
+├── utils
 ├── App.jsx
 └── main.jsx
 ```
@@ -89,28 +86,9 @@ src/
 
 ## State Management
 
-The application uses the Context API together with `useReducer` to manage the bundle state globally.
+Global state is managed using the Context API and `useReducer`.
 
-State includes:
-
-- Selected products
-- Product variants
-- Quantities
-- Active accordion step
-
-The bundle is automatically persisted to Local Storage and restored when the application reloads.
-
----
-
-## Responsive Design
-
-The interface is optimized for:
-
-- Mobile devices
-- Tablets
-- Desktop screens
-
-Layouts automatically adapt based on screen size while maintaining usability.
+The application persists the bundle to Local Storage, allowing users to continue where they left off after refreshing the page.
 
 ---
 
@@ -119,4 +97,5 @@ Layouts automatically adapt based on screen size while maintaining usability.
 **Gerges Nashaat**
 
 - GitHub: https://github.com/G3RGES
-- LinkedIn: https://linkedin.com/in/gergesnashaat
+- LinkedIn: https://www.linkedin.com/in/gergesnashaat/
+- Portfolio: https://gergesnashaat.vercel.app/
